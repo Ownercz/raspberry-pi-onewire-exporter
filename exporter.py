@@ -36,25 +36,7 @@ def gettemp():
             
 #        print(html)
         return html
-# HTTPRequestHandler class
-class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
- 
-  # GET
-  def do_GET(self):
-        # Send response status code
-        self.send_response(200)
- 
-        # Send headers
-        self.send_header('Content-type','text/plain')
-        self.end_headers()
- 
-        # Send message back to client
-        message = '\n'.join(map(str, gettemp()))
-        #message = gettemp()
-        # Write content as utf-8 data
-        self.wfile.write(bytes(message, "utf8"))
-        return
- 
+
 class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
   def handle(self):
       try:
