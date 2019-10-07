@@ -1,0 +1,1 @@
+/usr/bin/curl IP:8081 && /usr/bin/curl IP:8081 > /www/prometheus/node-exporter/collector-textfile/onewire.prom && echo '' >> /www/prometheus/node-exporter/collector-textfile/onewire.prom
